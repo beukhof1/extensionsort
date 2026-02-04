@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.glass-panel {
+  @apply bg-white/10 backdrop-blur-xl border border-white/10 shadow-glass;
+}
+
+.ambient-ring {
+  background: radial-gradient(circle at top, rgba(79, 209, 255, 0.25), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.35), transparent 45%);
+}
+
+.text-glow {
+  text-shadow: 0 0 18px rgba(79, 209, 255, 0.7);
+}
+
+.badge {
+  @apply rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+}
+
+.badge-ok {
+  @apply bg-emerald-400/20 text-emerald-300;
+}
+
+.badge-warning {
+  @apply bg-amber-400/20 text-amber-200;
+}
+
+.badge-critical {
+  @apply bg-rose-500/20 text-rose-300;
+}
+
+.card-hover {
+  @apply transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.section-title {
+  @apply text-xl font-semibold text-slate-100;
+}
